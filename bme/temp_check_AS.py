@@ -63,22 +63,6 @@ def credentials_setup():
 
 def write_to_speadsheet(temperature, humidity, pressure, run_count, run_time, errors_corrected, wb):
 
-    bme280_data = [
-        {
-            "measurement": "bme280",
-            "tags": {
-                "host": host_name
-            },
-            "fields": {
-                "temperature": float(temperature),
-                "humidity": float(humidity),
-                "pressure": float(pressure),
-                "errorscorrected": float(errors_corrected),
-                "readruncount": float(run_count),
-                "readruntime": float(run_time)
-            }
-        }
-    ]
     print(run_time)
     print((run_count))
     try:
