@@ -95,8 +95,8 @@ def speadsheet(temperature, humidity, pressure, run_count, run_time, errors_corr
         row = ('Run Time', run_time)
         sheet.append(row)
 
-        wb.save('/home/pi/output/environment.xslx')
-        wb.save('/home/pi/output/backup_environment.xslx')
+        wb.save('/home/pi/Scripts/OutdoorPi/bme/environment.xslx')
+        wb.save('/home/pi/Scripts/OutdoorPi/bme/backup_environment.xslx')
     except:
         print("Error encountered BME, waiting for next pass to try again")
 
