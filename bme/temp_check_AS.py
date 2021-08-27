@@ -61,7 +61,7 @@ def credentials_setup():
             spot += 1
 
 
-def speadsheet(temperature, humidity, pressure, run_count, run_time, errors_corrected, wb):
+def write_to_speadsheet(temperature, humidity, pressure, run_count, run_time, errors_corrected, wb):
 
     bme280_data = [
         {
@@ -156,7 +156,7 @@ def bme280_check_script(credentials):
         run_count = run_count + 1
         run_time = time.time() - start_time
 
-        write_to_influx(temperature, humidity, pressure, run_count, run_time, errors_corrected, credentials)
+        write_to_speadsheet(temperature, humidity, pressure, run_count, run_time, errors_corrected, wb)
 
 
 
