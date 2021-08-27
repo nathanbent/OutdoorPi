@@ -66,17 +66,7 @@ def write_to_speadsheet(temperature, humidity, pressure, run_count, run_time, er
     print(run_time)
     print((run_count))
     try:
-        column = ('Temperature', temperature)
-        sheet.append(row)
-        column = ('Humidity', humidity)
-        sheet.append(row)
-        column = ('Pressure', pressure)
-        sheet.append(row)
-        column = ('Errors Corrected', errors_corrected)
-        sheet.append(row)
-        column = ('Run Count', run_count)
-        sheet.append(row)
-        column = ('Run Time', run_time)
+        row = (temperature, humidity, pressure, run_count, run_time, errors_corrected)
         sheet.append(row)
 
         wb.save('/home/pi/Scripts/OutdoorPi/bme/environment.xlsx')
