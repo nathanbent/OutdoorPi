@@ -25,7 +25,7 @@ bme280 = adafruit_bme280.Adafruit_BME280_I2C(i2c)
 
 
 #Load the spreadsheet
-wb = load_workbook('home/pi/output/environment.xlsx')
+wb = load_workbook('/home/pi/Scripts/OutdoorPi/bme/environment.xslx')
 sheet = wb['Sheet1']
 
 
