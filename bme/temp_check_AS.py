@@ -25,7 +25,7 @@ bme280 = adafruit_bme280.Adafruit_BME280_I2C(i2c)
 
 
 #Load the spreadsheet
-wb = load_workbook('/home/pi/Scripts/OutdoorPi/bme/environment.xslx')
+wb = load_workbook('/home/pi/Scripts/OutdoorPi/bme/environment.xlsx')
 sheet = wb['Sheet1']
 
 
@@ -95,8 +95,8 @@ def speadsheet(temperature, humidity, pressure, run_count, run_time, errors_corr
         row = ('Run Time', run_time)
         sheet.append(row)
 
-        wb.save('/home/pi/Scripts/OutdoorPi/bme/environment.xslx')
-        wb.save('/home/pi/Scripts/OutdoorPi/bme/backup_environment.xslx')
+        wb.save('/home/pi/Scripts/OutdoorPi/bme/environment.xlsx')
+        wb.save('/home/pi/Scripts/OutdoorPi/bme/backup_environment.xlsx')
     except:
         print("Error encountered BME, waiting for next pass to try again")
 
