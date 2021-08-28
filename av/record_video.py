@@ -3,6 +3,6 @@ from time import sleep
 
 camera = PiCamera()
 
-camera.start_recording('/home/pi/Desktop/video.h264')
+camera.start_recording('/home/pi/Scripts/OutdoorPi/av/video.h264')
 sleep(5)
 camera.stop_recording()
